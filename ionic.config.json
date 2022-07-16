@@ -1,0 +1,7 @@
+{
+  "name": "mox-bank-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
