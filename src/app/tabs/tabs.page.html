@@ -1,20 +1,74 @@
-<ion-tabs>
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab($event)">
 
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+      <ion-icon name="wallet-outline"></ion-icon>
+      <ion-label>Accounts</ion-label>
     </ion-tab-button>
 
+    <div class="empty"></div>
+
     <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+      <ion-icon name="card-outline"></ion-icon>
+      <ion-label>Credit</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab4">
+      <ion-icon name="bar-chart-outline"></ion-icon>
+      <ion-label>Spending</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
+
+  <div (click)="onActiveMenu()" [ngClass]="{'button_container': true, 'active': activeMenu}">
+    <div [ngClass]="{'mox-button': true, 'active': activeMenu}">
+      <div class="ion-text-center">
+        <ion-icon slot="icon-only" size="large" src="../../assets/icon/Logo-black.svg"></ion-icon>
+        <div [ngClass]="{'label': true, 'active': activeMenu}">Actions</div>
+      </div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-01': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Exchange</div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-02': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Pay bills</div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-03': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Instant Loan</div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-04': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Transfer</div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-05': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Add money</div>
+    </div>
+    <div [ngClass]="{'menu': true,'item-06': activeMenu, 'active': activeMenu}">
+      <div class="icon-box">
+        <ion-icon name="card-outline"></ion-icon>
+      </div>
+      <div class="label">Request</div>
+    </div>
+  </div>
+  <div [ngClass]="{'mask': true, 'open':activeMenu}"></div>
+
 
 </ion-tabs>
