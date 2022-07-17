@@ -1,3 +1,74 @@
 ion-content {
     --ion-background-color: rgb(244, 249, 250);
+
+    .nav {
+        margin-top: 16px;
+        height: 48px;
+        width: auto;
+        margin: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .tools {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon-box {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                ion-icon {
+                    font-size: 24px;
+                    color: rgb(0, 0, 0);
+                }
+                .tag1 {
+                    background-color: #00FAFF;
+                    padding: 5px 5px;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 6px;
+                    right: 6px;
+                    z-index: 999;
+                }
+                .tag2 {
+                    background-color: #00FAFF;
+                    padding: 9px 9px;
+                    border-radius: 9px;
+                    position: absolute;
+                    top: -2px;
+                    right: -1px;
+                    z-index: 999;
+                }
+                .tag2::before {
+                    content: "";
+                    background-color: #000;
+                    padding: 2px 2px;
+                    border-radius: 2px;
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                    z-index: 999;
+                }
+            }
+            .icon-box:not(:last-child) {
+                margin-right: 16px;
+            }
+            
+        }
+    }
 }
