@@ -22,15 +22,20 @@
       <ion-icon name="bar-chart-outline"></ion-icon>
       <ion-label>Spending</ion-label>
     </ion-tab-button>
+
+    <div #progress [ngClass]="{'progress':true, selectTab: true}"></div>
   </ion-tab-bar>
 
   <div (click)="onActiveMenu()" [ngClass]="{'button_container': true, 'active': activeMenu}">
     <div [ngClass]="{'mox-button': true, 'active': activeMenu}">
-      <div class="ion-text-center">
-        <ion-icon slot="icon-only" size="large" src="../../assets/icon/Logo-black.svg"></ion-icon>
+        <div class="icon-box" >
+          <ion-icon slot="icon-only" size="large" src="../../assets/icon/Logo-black.svg"></ion-icon>
+        </div>
         <div [ngClass]="{'label': true, 'active': activeMenu}">Actions</div>
-      </div>
     </div>
+    
+  </div>
+  <div class="menu-group">
     <div [ngClass]="{'menu': true,'item-01': activeMenu, 'active': activeMenu}">
       <div class="icon-box">
         <ion-icon name="card-outline"></ion-icon>

@@ -4,8 +4,9 @@ ion-tabs {
     ion-tab-bar {
         position: absolute;
         bottom: 0;
+        height: 72px;
         width: 100%;
-        padding-bottom: calc(16px + env(safe-area-inset-bottom));  
+        padding-bottom: calc(6px + env(safe-area-inset-bottom));  
         --border: 0;
         -webkit-box-shadow: 0px -2px 8px 0px rgb(0 0 0 / 24%);
         -moz-box-shadow: 0px -2px 8px 0px rgb(0 0 0 / 24%);
@@ -13,14 +14,27 @@ ion-tabs {
 
         ion-tab-button {
             --background: var(--ion-color-white);
+            --padding-top: 6px;
             --color: var(--ion-color-medium);
             --color-selected: var(--ion-color-dark);
+        
             ion-icon {
                 font-size: 32px;
             }
         }
         ion-label {
             font-size: 10px;
+        }
+
+        .progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #00FAFF;
+            height: 4px;
+            width: 48px;
+            border-radius: 2px;
+            transition:  0.3s ease-in-out;
         }
     }
     .empty {
@@ -29,34 +43,35 @@ ion-tabs {
 
 
     .button_container {
+        z-index: 999;
         width: 86px;
         height: 86px;
         position: absolute;
         bottom: calc(6px + env(safe-area-inset-bottom));
         left: calc(50% - 41px);
         cursor: pointer;
-        z-index: 999;
         color: #fff;
         background: #000;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
         .mox-button {
             width: 86px;
             height: 86px;
             cursor: pointer;
-            padding-top: 10px;
-            z-index: 1000;
+            z-index: 1002;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             .label {
+                top: 60px;
+                position: absolute;
                 font-size: 10px;
                 color: #fff;
-                transition: 0.8s cubic-bezier(0.85, 0.06, 0.88, 0.14);
+                transition: 0.6s cubic-bezier(0.85, 0.06, 0.88, 0.14);
                 &.active {
                     opacity: 0;
                     transition: 0.1s ease;
@@ -69,10 +84,22 @@ ion-tabs {
             height: 160vw;
             left: -30vw;
             transform: rotate(360deg);
-            bottom: calc(-80vw + 43px + env(safe-area-inset-bottom));
+            bottom: calc(-80vw + 49px + env(safe-area-inset-bottom));
             color: #000;
             background: #fff;
         }
+        
+      }
+    .menu-group {
+        position: absolute;
+        pointer-events:none;
+        z-index: 1003;
+        width: 160%;
+        height: 160vw;
+        left: -30vw;
+        bottom: calc(-80vw + env(safe-area-inset-bottom));
+        color: #000;
+        background: rgba(255, 255, 255, 0);
         .menu {
             position: absolute;
             display: flex;
@@ -80,12 +107,11 @@ ion-tabs {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transform: scale(0.1);
-            transition: all 5s ease-in-out;
-            left: 45%;
-            top: 50%;
+            transform: scale(0);
+            bottom: calc(50% + 12px + env(safe-area-inset-bottom));
+            left: calc(50% - 38px);
             &.active {
-                visibility: visible;
+
                 transform: scale(1);
             }
             ion-icon {
@@ -105,32 +131,38 @@ ion-tabs {
                 background: rgb(0, 0, 0);
             }
             &.item-01 {
-                left: 30%;
-                top: 10%;
+                left: calc(33% - 38px);
+                bottom: 85%;
+                transition: 0.35s ease-in-out;
             }
             &.item-02 {
-                left: 45%;
-                top: 10%;
+                left: calc(50% - 38px);
+                bottom: 85%;
+                transition: 0.4s ease-in-out;
             }
             &.item-03 {
-                left: 60%;
-                top: 10%;
+                left: calc(66% - 38px);
+                bottom: 85%;
+                transition: 0.45s ease-in-out;
             }
             &.item-04 {
-                left: 30%;
-                top:25%;
+                left: calc(33% - 38px);
+                bottom: 70%;
+                transition: 0.5s ease-in-out;
             }
             &.item-05 {
-                left: 45%;
-                top: 25%;
+                left: calc(50% - 38px);
+                bottom: 70%;
+                transition:  0.55s ease-in-out;
             }
             &.item-06 {
-                left: 60%;
-                top: 25%;
+                left: calc(66% - 38px);
+                bottom: 70%;
+                transition:  0.65s ease-in-out;
             }
         }
-      }
-      
+    }  
+    
     .mask {
         position: absolute;
         top: 0;
