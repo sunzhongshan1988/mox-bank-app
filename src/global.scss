@@ -27,36 +27,55 @@
 
 /* Fonts */
 @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Noto Sans Light"), local("Noto-Sans-Light"), url("assets/fonts/NotoSans-Light.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 500;
-    src: local("Noto Sans Medium"), local("Noto-Sans-Medium"), url("assets/fonts/NotoSans-Medium.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("assets/fonts/NotoSans-Bold.ttf") format("truetype");
-  }
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Light"), local("Noto-Sans-Light"), url("assets/fonts/NotoSans-Light.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "Maison Neue Light";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Maison Neue Light"), local("Maison-Neue-Light"), url("assets/fonts/MaisonNeue-Light.ttf") format("truetype");
-  }
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("Noto-Sans-Medium"), url("assets/fonts/NotoSans-Medium.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "Maison Neue Bold";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Maison Neue Blod"), local("Maison-Neue-Blod"), url("assets/fonts/MaisonNeue-Bold.ttf") format("truetype");
-  }
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("assets/fonts/NotoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maison Neue Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Maison Neue Light"), local("Maison-Neue-Light"), url("assets/fonts/MaisonNeue-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maison Neue Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Maison Neue Blod"), local("Maison-Neue-Blod"), url("assets/fonts/MaisonNeue-Bold.ttf") format("truetype");
+}
+
+/* icons */
+@font-face {
+  font-family: "MoxIcons";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MoxIcons"), url("assets/fonts/MoxIcons.ttf") format("truetype");
+}
+.mox-icon {
+  font-family: "MoxIcons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+.home:before { content:'\E99F'; }
