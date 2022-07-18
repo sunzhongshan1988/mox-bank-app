@@ -52,8 +52,8 @@
   --ion-color-danger-tint: #ed576b;
 
   /** dark **/
-  --ion-color-dark: #222428;
-  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark: #242222;
+  --ion-color-dark-rgb: 0, 0, 0;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
@@ -76,6 +76,14 @@
   --ion-color-light-tint: #f5f6f9;
 
   --ion-font-family: "Noto Sans", sans-serif;
+
+  /** Custom CSS Variables **/
+  --mox-number-font-family-l: "Maison Neue Light", sans-serif;
+  --mox-number-font-family-b: "Maison Neue Bold", sans-serif;
+
+  --mox-color-dark: #000000;
+  --mox-color-white: #ffffff;
+  --mox-color-gray500: #737882;
 }
 
 @media (prefers-color-scheme: dark-no) {

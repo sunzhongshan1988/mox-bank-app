@@ -46,3 +46,17 @@
     font-weight: 700;
     src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("assets/fonts/NotoSans-Bold.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Maison Neue Light";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Maison Neue Light"), local("Maison-Neue-Light"), url("assets/fonts/MaisonNeue-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Maison Neue Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Maison Neue Blod"), local("Maison-Neue-Blod"), url("assets/fonts/MaisonNeue-Bold.ttf") format("truetype");
+  }

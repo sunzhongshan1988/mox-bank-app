@@ -177,8 +177,8 @@ ion-tabs {
         &.open {
             opacity: 1;
             visibility: visible;
-            -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px) saturate(180%);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px) saturate(180%);
         }
     }
 }
