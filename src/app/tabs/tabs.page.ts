@@ -17,17 +17,13 @@ export class TabsPage implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('ngOnInit');
-    //this.tabs.select('tab1');
   }
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
   }
 
   async setCurrentTab(event) {
     try {
       const button = document.getElementById(`tab-button-${event.tab}`).getBoundingClientRect();
-      console.log(button);
       if(this.selectTab === 'tab2') {
         this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
       } else if (this.selectTab === 'tab3') {

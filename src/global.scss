@@ -48,14 +48,28 @@
 }
 
 @font-face {
-  font-family: "Maison Neue Light";
+  font-family: "Maison Neue";
   font-style: normal;
   font-weight: 300;
   src: local("Maison Neue Light"), local("Maison-Neue-Light"), url("assets/fonts/MaisonNeue-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Maison Neue Bold";
+  font-family: "Maison Neue";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Maison Neue Medium"), local("Maison-Neue-Medium"), url("assets/fonts/MaisonNeue-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maison Neue";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Maison Neue Demi"), local("Maison-Neue-Demi"), url("assets/fonts/MaisonNeue-Demi.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Maison Neue";
   font-style: normal;
   font-weight: 700;
   src: local("Maison Neue Blod"), local("Maison-Neue-Blod"), url("assets/fonts/MaisonNeue-Bold.ttf") format("truetype");
@@ -77,5 +91,25 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   position: relative;
+
+  &.home:before { content:'\E99F'; }
+  &.account:before { content:'\E99D'; }
+  &.credit:before { content:'\E966'; }
+  &.spending:before { content:'\E9A2'; }
+
+  &.plus:before { content:'\E908'; }
+  &.diamond:before { content:'\E975'; }
+  &.star:before { content:'\E9FE'; }
+  &.bell:before { content:'\E90D'; }
+  &.percent:before { content:'\E94F'; }
+  &.right-arrow:before { content:'\E923'; }
+  &.limit:before { content:'\E91C'; }
+  &.add-money:before { content:'\E90A'; }
+  &.switch:before { content:'\E9EA'; }
+  &.referral:before { content:'\E909'; }
+  &.transfer:before { content:'\E92A'; }
+  &.currency:before { content:'\E92C'; }
 }
-.home:before { content:'\E99F'; }
+
+
+

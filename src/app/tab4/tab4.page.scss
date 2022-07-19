@@ -1,0 +1,67 @@
+ion-content {
+    --ion-background-color: rgb(244, 249, 250);
+    --padding-bottom: 82px;
+    .nav {
+        width: auto;
+        padding: 14px 16px;
+        background-color: var(--mox-color-white);
+        .title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--mox-color-dark);
+        }
+    }
+    .filter{
+        margin: 16px 16px;
+        width: auto;
+        display: flex;
+        align-items: flex-start;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item{
+            height: 32px;
+            padding: 0 8px;
+            border-radius: 32px;
+            color: var(--mox-color-white);
+            flex-shrink: 0;
+            background-color: var(--mox-color-dark);
+            display: flex;
+            align-items: center;
+            &:not(:last-child){
+                margin-right: 8px;
+            }
+            &::after{
+                font-family: "MoxIcons";
+                content: '\E922';
+                font-size: 12px;
+                color: var(--mox-color-white);
+            }
+            span {
+                font-size: 12px;
+                padding: 0 6px;
+            }
+        }
+    }
+    .chart{
+        padding: 16px;
+        border-radius: 24px;
+        background-color: var(--mox-color-white);
+        .name{
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--mox-color-dark);
+        }
+        .draw{
+            max-width: 380px;
+            aspect-ratio: 1 / 1;
+        }
+    }
+    .list{
+
+    }
+}
