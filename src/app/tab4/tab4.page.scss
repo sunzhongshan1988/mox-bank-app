@@ -57,8 +57,12 @@ ion-content {
             color: var(--mox-color-dark);
         }
         .draw{
-            max-width: 380px;
+            min-width: 380px;
+            min-height: 380px;
+            width: 100%;
             aspect-ratio: 1 / 1;
+            text-align: center;
+            display: inline-block;
         }
     }
     .list{

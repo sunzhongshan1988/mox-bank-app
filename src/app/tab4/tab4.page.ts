@@ -4,7 +4,7 @@ import {
   ApexNonAxisChartSeries,
   ApexResponsive,
   ApexChart
-} from "ng-apexcharts";
+} from 'ng-apexcharts';
 
 export type ChartOptions = {
   series: ApexNonAxisChartSeries;
@@ -20,23 +20,26 @@ export type ChartOptions = {
 })
 export class Tab4Page implements OnInit, AfterViewInit {
 
-  @ViewChild("chart") chart: ChartComponent;
+  @ViewChild('chart') chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
-  stanby: boolean = false;
+  stanby = false;
   constructor() {
     this.chartOptions = {
-      series: [10,11,11,11,11],
+      series: [0, 0, 0, 0, 0],
       chart: {
-        type: "donut",
+        type: 'donut',
       },
-      labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+      labels: ['food', 'wallets', 'groceries', 'others', 'shopping'],
       responsive: [
         {
-          breakpoint: 480,
+          breakpoint: 800,
           options: {
             chart: {
-              width: 300
+              width: '100%',
+            },
+            colors: ['#827AFE', '#FE3878', '#2A98F0', '#ECEBEC', '#96FC3D'],
+            fill: {
             },
             legend: {
               show: false
@@ -47,14 +50,42 @@ export class Tab4Page implements OnInit, AfterViewInit {
             dataLabels: {
               enabled: true,
               enabledOnSeries: undefined,
-              formatter: function (val) {
-                  return Math.round(val)+`%`;
+              offsetX: 0,
+              offsetY: 0,
+              formatter: (val, {seriesIndex}) => `\uE975\n${Math.round(val)}%`,
+              style: {
+                fontFamily: 'MoxIcons',
+                colors: ['#000000']
               },
+              dropShadow: {
+                enabled: false,
+              }
+            },
+            plotOptions: {
+              pie: {
+                expandOnClick: false,
+                donut: {
+                  size: '72%',
+                  labels: {
+                    show: true,
+                    total: {
+                      show: true,
+                      label: '',
+                      color: '#000000',
+                      fontWeight: 700,
+                      formatter: (w) => {
+                        const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+                        return `${0 - total} HKD`;
+                      }
+                    }
+                  }
+                }
+              }
             },
             animations: {
               enabled: true,
               easing: 'easeinout',
-              speed: 800,
+              speed: 1600,
               animateGradually: {
                   enabled: true,
                   delay: 150
@@ -63,8 +94,7 @@ export class Tab4Page implements OnInit, AfterViewInit {
                   enabled: true,
                   speed: 350
               }
-          }
-      
+            }
           }
         }
       ]
@@ -74,5 +104,10 @@ export class Tab4Page implements OnInit, AfterViewInit {
   }
   ngAfterViewInit() {
     this.stanby = true;
+    setTimeout(() => {
+      this.chart.updateOptions({
+        series: [ 1842.50, 1800.00, 553.90, 375.00, 336.00 ],
+      }, true, false);
+    }, 1000);
   }
 }
