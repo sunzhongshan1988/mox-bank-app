@@ -151,6 +151,9 @@ ion-content {
             position: relative;
             background-size: cover;
             background-image: url("../../assets/images/mastercard.png");
+            @supports not (aspect-ratio: 1.6) {
+                padding-top: 62%;
+            }
 
             .content {
                 position: absolute;
