@@ -389,4 +389,20 @@ ion-content {
             }
         }
     }
+    
 }
+
+@supports not (aspect-ratio: 1.6) {
+    .credit-card.container {
+        &::before {
+            float: left;
+            padding-top: 62%;
+            content: "";
+          }
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+          }
+    }
+  }

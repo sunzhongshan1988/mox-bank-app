@@ -9,15 +9,15 @@ import { createAnimation, NavController } from '@ionic/angular';
 })
 export class DetailPage implements OnInit {
   public barActive = 5;
-
+  public title: string;
   constructor(
     private route: ActivatedRoute,
-    private navCtrl: NavController) { 
+    private navCtrl: NavController) {
+      this.title = '';
     }
-  title = '';
+
   ngOnInit() {
     this.title = this.route.snapshot.paramMap.get('type');
-    
   }
 
   onClickBar(index: number) {
