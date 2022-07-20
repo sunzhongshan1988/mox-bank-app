@@ -1,6 +1,63 @@
+ion-header {
+    ion-toolbar {
+        --background: #ffffff;
+        --border-width: 0;
+        ion-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--mox-color-dark);
+        }
+        i{
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--mox-color-dark);
+        }
+    }
+}
 ion-content {
     --ion-background-color: rgb(244, 249, 250);
     --padding-bottom: 82px;
+
+    .normal-amount {
+        span:first-child {
+            font-weight: 700;
+        }
+        span:last-child {
+            font-weight: 300;
+        }
+    }
+    .two-row-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-clamp: 2; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    .hr {
+        border: 0;
+        border-top: 1px solid rgb(231, 231, 231);
+        display: block;
+        height: 1px;
+        padding: 0;
+    }
+    .bg1 {
+        background-color: #827AFE;
+    }
+    .bg2 {
+        background-color: #FE3878;
+    }
+    .bg3 {
+        background-color: #2A98F0;
+    }
+    .bg4 {
+        background-color: #ECEBEC;
+    }
+    .bg5 {
+        background-color: #96FC3D;
+    }
+
+
     .nav {
         width: auto;
         padding: 14px 16px;
@@ -13,7 +70,7 @@ ion-content {
         }
     }
     .filter{
-        margin: 16px 16px;
+        margin: 20px 16px;
         width: auto;
         display: flex;
         align-items: flex-start;
@@ -48,24 +105,76 @@ ion-content {
         }
     }
     .chart{
-        padding: 16px;
-        border-radius: 24px;
-        background-color: var(--mox-color-white);
-        .name{
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--mox-color-dark);
-        }
         .draw{
             min-width: 380px;
-            min-height: 380px;
+            min-height: 200px;
             width: 100%;
-            aspect-ratio: 1 / 1;
-            text-align: center;
             display: inline-block;
         }
     }
-    .list{
-
+    .breakdown {
+        margin-top: 24px;
+    }
+    .card {
+        padding: 20px 0;
+        width: auto;
+        border-radius: 24px;
+        background-color: var(--mox-color-white);
+        .header {
+            padding: 8px 16px 16px 16px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .list {
+            width: 100%;
+            .item {
+                padding: 16px 16px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                overflow: hidden;
+                .left {
+                    max-width: 70%;
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        width: 42px;
+                        height: 42px;
+                        flex: 0 0 auto;
+                        border-radius: 50%;
+                        font-size: 28px;
+                        color: var(--mox-color-dark);
+                        text-align: center;
+                        i {
+                            line-height: 42px;
+                        }
+                        
+                    }
+                    .info {
+                        font-size: 14px;
+                        font-weight: 300;
+                        padding-left: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        span:last-child {
+                            padding-top: 4px;
+                            font-size: 12px;
+                            color: var(--mox-color-gray500);
+                        }
+                    }
+                }
+                .right {
+                    .percent {
+                        font-size: 12px;
+                        padding-top: 4px;
+                        font-weight: 300;
+                        color: var(--mox-color-gray500);
+                    }
+                }
+            }
+        }
     }
 }

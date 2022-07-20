@@ -1,0 +1,151 @@
+ion-header {
+    ion-toolbar {
+        --background: #827AFE;
+        --border-width: 0;
+        color: var(--mox-color-dark);
+        font-weight: 500;
+        ion-title {
+            font-size: 20px;   
+        }
+        ion-icon {
+            color: var(--mox-color-dark);
+            font-size: 24px;
+        }
+    }
+  }
+ion-content {
+    --background: #827AFE;
+
+    .normal-amount {
+        span:first-child {
+            font-weight: 700;
+            color: var(--mox-color-dark);
+        }
+        span:last-child {
+            font-weight: 300;
+            color: var(--mox-color-dark);
+        }
+    }
+
+    .card {
+        margin-top: 36px;
+        padding: 20px 0;
+        width: auto;
+        border-radius: 24px;
+        background-color: var(--mox-color-white);
+        position: relative;
+        .circle {
+            top: -36px;
+            left: calc(50% - 36px);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: var(--mox-color-white);
+            position: absolute;
+        }
+        .header {
+            top: -32px;
+            left: calc(50% - 32px);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #827AFE;
+            position: absolute;
+            text-align: center;
+            i{
+                font-size: 42px;
+                line-height: 64px;
+            }
+        }
+
+        .month {
+            padding: 32px 0;
+            width: 100%;
+            text-align: center;
+            .amount{
+                font-size: 24px;
+            }
+            .date {
+                font-size: 14px;
+                font-weight: 300;
+                color: var(--mox-color-gray500);
+            }
+        }
+        .chart {
+            width: 100%;
+            .base-line {
+                width: auto;
+                height: 2px;
+                margin: 0 22px 0 50px;
+                background: var(--mox-color-gray500);
+                position: relative;
+                .avg-container {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 25px;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        position: absolute;
+                        left: -28px;
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: var(--mox-color-gray500);
+                    }
+                    .avg-line {
+                        width: 100%;
+                        height: 1px;
+                        border-bottom: 1px dashed var(--mox-color-gray500);
+                        box-sizing: border-box;
+                    }
+                }
+            }
+            .container{
+                padding: 0 16px 0 48px;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+                position: relative;
+                .item-bar {
+                    height: 128px;
+                    width: 24px;
+                    .bar{
+                        position: absolute;
+                        bottom: 0;
+                        width: 24px;
+                        border-radius: 12px 12px 0 0;
+                        background-color: #827AFE;
+                        opacity: 0.3;
+                        min-height: 0;
+                        max-height: 128px;
+                        transition: all 0.2s;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                    
+                }
+                .date{
+                    line-height: 28px;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: var(--mox-color-gray500);
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    .border {
+                        position: absolute;
+                        bottom: 2px;
+                        width: 0;
+                        border-bottom: 1px solid #827AFE;
+                        box-sizing: border-box;
+                        transition: all 0.2s ease-in-out;
+                        &.active {
+                            width: 24px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}

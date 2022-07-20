@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import {
   ChartComponent,
   ApexNonAxisChartSeries,
@@ -24,7 +25,7 @@ export class Tab4Page implements OnInit, AfterViewInit {
   public chartOptions: Partial<ChartOptions>;
 
   stanby = false;
-  constructor() {
+  constructor(private navCtrl: NavController) {
     this.chartOptions = {
       series: [0, 0, 0, 0, 0],
       chart: {
@@ -52,9 +53,9 @@ export class Tab4Page implements OnInit, AfterViewInit {
               enabledOnSeries: undefined,
               offsetX: 0,
               offsetY: 0,
-              formatter: (val, {seriesIndex}) => `\uE975\n${Math.round(val)}%`,
+              formatter: (val, {seriesIndex}) => `${Math.round(val)}%`,
               style: {
-                fontFamily: 'MoxIcons',
+                fontFamily: 'Maison Neue, sans-serif',
                 colors: ['#000000']
               },
               dropShadow: {
@@ -109,5 +110,8 @@ export class Tab4Page implements OnInit, AfterViewInit {
         series: [ 1842.50, 1800.00, 553.90, 375.00, 336.00 ],
       }, true, false);
     }, 1000);
+  }
+  gotoDetail() {
+    this.navCtrl.navigateForward(["/pages/spending/detail", { type: 'Food & drinks' }]);
   }
 }

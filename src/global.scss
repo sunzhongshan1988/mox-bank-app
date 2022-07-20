@@ -97,6 +97,7 @@
   &.credit:before { content:'\E966'; }
   &.spending:before { content:'\E9A2'; }
 
+  &.cancel:before { content:'\E926'; }
   &.plus:before { content:'\E908'; }
   &.diamond:before { content:'\E975'; }
   &.star:before { content:'\E9FE'; }
@@ -109,6 +110,11 @@
   &.referral:before { content:'\E909'; }
   &.transfer:before { content:'\E92A'; }
   &.currency:before { content:'\E92C'; }
+  &.food:before { content:'\E945'; }
+  &.wallet::after { content:'\E935'; }
+  &.groceries:before { content:'\E947'; }
+  &.shopping:before { content:'\E984'; }
+  &.other:before { content:'\E965'; }
 }
 
 

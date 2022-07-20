@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons collapse="true">
+      <ion-button (click)="back()">
+        <ion-icon size="large" slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+    <div class="circle"></div>
+    <div class="header">
+      <i class="mox-icon food"></i>
+    </div>
+
+    <div class="month">
+      <div class="amount normal-amount">
+        <span>-1,842.50</span>
+        <span> HKD</span>
+      </div>
+      <div class="date">
+        <span>July 2022</span>
+      </div>
+    </div>
+
+    <div class="chart">
+      <div class="container">
+        <div class="item-bar">
+          <div class="bar"
+            [ngClass]="{'bar':true, 'active':barActive===1}"
+            style="height: 0;"
+            (click)="onClickBar(1)"
+          ></div>
+        </div>
+        <div class="item-bar">
+          <div class="bar"
+            [ngClass]="{'bar':true, 'active':barActive===2}"
+            style="height: 0;"
+            (click)="onClickBar(2)"
+          ></div>
+        </div>
+        <div class="item-bar">
+          <div class="bar"
+            [ngClass]="{'bar':true, 'active':barActive===3}"
+            style="height: 100%;"
+            (click)="onClickBar(3)"
+          ></div>
+        </div>
+        <div class="item-bar">
+          <div class="bar"
+            [ngClass]="{'bar':true, 'active':barActive===4}"
+            style="height: 50%;"
+            (click)="onClickBar(4)"
+          ></div>
+        </div>
+        <div class="item-bar">
+          <div class="bar"
+            [ngClass]="{'bar':true, 'active':barActive===5}"
+            style="height: 70%;"
+            (click)="onClickBar(5)"
+          ></div>
+        </div>
+      </div>
+      <div class="base-line">
+        <div class="avg-container">
+          <span>Avg.</span>
+          <div class="avg-line"></div>
+        </div>
+      </div>
+      <div class="container">
+          <div class="date">Mar'22
+            <div [ngClass]="{'border':true, 'active':barActive===1}"></div>
+          </div>
+          <div class="date">Apr'
+            <div [ngClass]="{'border':true, 'active':barActive===2}"></div>
+          </div>
+          <div class="date">May'22
+            <div [ngClass]="{'border':true, 'active':barActive===3}"></div>
+          </div>
+          <div class="date">Jun'22
+            <div [ngClass]="{'border':true, 'active':barActive===4}"></div>
+          </div>
+          <div class="date">Jul'22
+            <div [ngClass]="{'border':true, 'active':barActive===5}"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

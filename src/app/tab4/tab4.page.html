@@ -1,7 +1,9 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Spending</ion-title>
+    </ion-toolbar>
+</ion-header>
 <ion-content>
-    <div class="nav">
-        <div class="title">Spending</div>
-    </div>
     <div class="filter">
         <div class="item">
             <span>Jul 2022</span>
@@ -13,8 +15,8 @@
             <span>All accounts</span>
         </div>
     </div>
-    <div class="chart">
-        <div class="name">
+    <div class="card chart">
+        <div class="header">
             <span>Total spending</span>
         </div>
         <div class="draw">
@@ -26,7 +28,120 @@
             ></apx-chart>
         </div>
     </div>
-    <div class="list">
-
+    <div class="card breakdown">
+        <div class="header">
+            Breakdown
+        </div>
+        <div class="list">
+            <div class="item ion-activatable" (click)="gotoDetail()">
+                <div class="left">
+                  <div class="icon bg1">
+                    <i class="mox-icon food"></i>
+                  </div>
+                  <div class="info">
+                    <span class="two-row-text">Food & drinks</span>
+                    <span>7 transactions</span>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="normal-amount">
+                        <span>-1,842.50</span>
+                        <span> HKD</span>
+                    </div>
+                    <div class="percent">
+                        <span class="ion-float-right">40%</span>
+                    </div>
+                </div>
+                <ion-ripple-effect></ion-ripple-effect>
+            </div>
+            <div class="hr"></div>
+            <div class="item ion-activatable">
+                <div class="left">
+                  <div class="icon bg2">
+                    <i class="mox-icon wallet"></i>
+                  </div>
+                  <div class="info">
+                    <span class="two-row-text">Digital wallets</span>
+                    <span>3 transactions</span>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="normal-amount">
+                        <span>-1,800.00</span>
+                        <span> HKD</span>
+                    </div>
+                    <div class="percent">
+                        <span class="ion-float-right">36%</span>
+                    </div>
+                </div>
+                <ion-ripple-effect></ion-ripple-effect>
+            </div>
+            <div class="hr"></div>
+            <div class="item ion-activatable">
+                <div class="left">
+                  <div class="icon bg3">
+                    <i class="mox-icon groceries"></i>
+                  </div>
+                  <div class="info">
+                    <span class="two-row-text">Groceries</span>
+                    <span>7 transactions</span>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="normal-amount">
+                        <span>-553.90</span>
+                        <span> HKD</span>
+                    </div>
+                    <div class="percent">
+                        <span class="ion-float-right">11%</span>
+                    </div>
+                </div>
+                <ion-ripple-effect></ion-ripple-effect>
+            </div>
+            <div class="hr"></div>
+            <div class="item ion-activatable">
+                <div class="left">
+                  <div class="icon bg4">
+                    <i class="mox-icon other"></i>
+                  </div>
+                  <div class="info">
+                    <span class="two-row-text">Others</span>
+                    <span>1 transactions</span>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="normal-amount">
+                        <span>-375.00</span>
+                        <span> HKD</span>
+                    </div>
+                    <div class="percent">
+                        <span class="ion-float-right">7%</span>
+                    </div>
+                </div>
+                <ion-ripple-effect></ion-ripple-effect>
+            </div>
+            <div class="hr"></div>
+            <div class="item ion-activatable">
+                <div class="left">
+                  <div class="icon bg5">
+                    <i class="mox-icon shopping"></i>
+                  </div>
+                  <div class="info">
+                    <span class="two-row-text">Shopping</span>
+                    <span>1 transactions</span>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="normal-amount">
+                        <span>-336.00</span>
+                        <span> HKD</span>
+                    </div>
+                    <div class="percent">
+                        <span class="ion-float-right">6%</span>
+                    </div>
+                </div>
+                <ion-ripple-effect></ion-ripple-effect>
+            </div>
+        </div>
     </div>
 </ion-content>

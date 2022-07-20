@@ -23,7 +23,7 @@ ion-content {
         border-top: 1px solid rgb(231, 231, 231);
         display: block;
         height: 1px;
-        margin: 12px 0;
+        margin: 0 16px;
         padding: 0;
     }
 
@@ -111,13 +111,13 @@ ion-content {
             align-items: center;
             
             .amount {
-                font-size: 32px;
+                font-size: 30px;
                 span:first-child {     
-                    font-family: var(--mox-number-font-family-b);
+                    font-weight: 700;
                     color: var(--mox-color-dark);
                 }
                 span:last-child {
-                    font-family: var(--mox-number-font-family-l);
+                    font-weight: 300;
                     color: var(--mox-color-gray500);
                 }
             }
@@ -141,7 +141,7 @@ ion-content {
         }
     }
 
-    .card {
+    .credit-card {
         margin: 16px 16px;
         width: auto;
         .container {
@@ -155,13 +155,13 @@ ion-content {
             .content {
                 position: absolute;
                 top: 34%;
-                left: 10%;
+                left: 9%;
                 .one {
                     font-size: 12px;
                     font-weight: 300;
                 }
                 .two {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
                 .three {
                     font-size: 12px;
@@ -318,39 +318,39 @@ ion-content {
     }
 
     .activity {
-        padding: 24px 16px;
+        padding: 20px 0;
         width: auto;
         border-radius: 24px;
         background-color: var(--mox-color-white);
         .header {
+            padding: 8px 16px 16px 16px;
             width: 100%;
             font-size: 20px;
             font-weight: 500;
-
             span:last-child {
                 float: right;
             }
         }
         .list {
             width: 100%;
-            padding-top: 24px;
 
             .item {
+                padding: 16px 16px;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
-
+                position: relative;
                 .left {
                     max-width: 70%;
                     display: flex;
                     align-items: center;
                     .icon {
-                        width: 36px;
-                        height: 36px;
+                        width: 42px;
+                        height: 42px;
                         flex: 0 0 auto;
                         border-radius: 50%;
-                        font-size: 24px;
+                        font-size: 28px;
                         color: var(--mox-color-dark);
                         &.style1 {
                             text-align: center;
@@ -364,13 +364,9 @@ ion-content {
                             justify-content: center;
                         }
                         i {
-                            line-height: 36px;
+                            line-height: 42px;
                         }
                         
-                    }
-                    ion-icon {
-                        line-height: 36px;
-                        font-size: 24px;
                     }
                     .info {
                         font-size: 14px;
@@ -379,6 +375,8 @@ ion-content {
                         display: flex;
                         flex-direction: column;
                         span:last-child {
+                            padding-top: 4px;
+                            font-size: 12px;
                             color: var(--mox-color-gray500);
                         }
                     }
