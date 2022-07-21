@@ -31,7 +31,7 @@ export class Tab4Page implements OnInit, AfterViewInit {
       chart: {
         type: 'donut',
       },
-      labels: ['food', 'wallets', 'groceries', 'others', 'shopping'],
+      labels: ['Food & drinks', 'Digital wallets', 'Groceries', 'Others', 'Shopping'],
       responsive: [
         {
           breakpoint: 800,
@@ -71,9 +71,11 @@ export class Tab4Page implements OnInit, AfterViewInit {
                     show: true,
                     total: {
                       show: true,
-                      label: '',
+                      label: 'Total',
                       color: '#000000',
-                      fontWeight: 700,
+                      fontSize: '20px',
+                      fontFamily: 'Maison Neue, sans-serif',
+                      fontWeight: 500,
                       formatter: (w) => {
                         const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
                         return `${0 - total} HKD`;
