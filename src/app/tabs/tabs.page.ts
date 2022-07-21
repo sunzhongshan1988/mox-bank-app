@@ -22,17 +22,10 @@ export class TabsPage implements OnInit, AfterViewInit {
   }
 
   async setCurrentTab(event) {
+  this.selectTab = event.tab;
     try {
       const button = document.getElementById(`tab-button-${event.tab}`).getBoundingClientRect();
-      if(this.selectTab === 'tab2') {
-        this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
-      } else if (this.selectTab === 'tab3') {
-        this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
-      } else if (this.selectTab === 'tab4') {
-        this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
-      } else {
-        this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
-      }
+      this.progrss.nativeElement.style.left = `${button.left + (button.width-48)/2}px`;
     } catch (error) {
       console.log('Must be wait for the tab element after refresh the page.');
       return setTimeout(() => {
