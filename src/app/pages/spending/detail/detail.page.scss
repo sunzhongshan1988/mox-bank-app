@@ -135,6 +135,9 @@ ion-content {
                     display: flex;
                     justify-content: center;
                     position: relative;
+                    &.active {
+                        font-weight: 500;
+                    }
                     .border {
                         position: absolute;
                         bottom: 2px;
@@ -148,6 +151,13 @@ ion-content {
                     }
                 }
             } 
+        }
+        .history {
+            .item{
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+            }
         }
     }
 }
