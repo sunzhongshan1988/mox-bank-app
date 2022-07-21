@@ -151,6 +151,9 @@ ion-content {
             position: relative;
             background-size: cover;
             background-image: url("../../assets/images/mastercard.png");
+            @supports not (aspect-ratio: 1.6) {
+                padding-top: 62%;
+            }
 
             .content {
                 position: absolute;
@@ -389,4 +392,20 @@ ion-content {
             }
         }
     }
+    
 }
+
+@supports not (aspect-ratio: 1.6) {
+    .credit-card.container {
+        &::before {
+            float: left;
+            padding-top: 62%;
+            content: "";
+          }
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+          }
+    }
+  }
