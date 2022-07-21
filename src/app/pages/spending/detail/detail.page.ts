@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { createAnimation, NavController } from '@ionic/angular';
+import { AnimationController, createAnimation, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detail',
@@ -8,9 +8,13 @@ import { createAnimation, NavController } from '@ionic/angular';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit {
+  @ViewChild('index3') bar3: ElementRef;
+  @ViewChild('index4') bar4: ElementRef;
+  @ViewChild('index5') bar5: ElementRef;
   public barActive = 5;
   public title: string;
   constructor(
+    private animationCtrl: AnimationController,
     private route: ActivatedRoute,
     private navCtrl: NavController) {
       this.title = '';
@@ -18,26 +22,15 @@ export class DetailPage implements OnInit {
 
   ngOnInit() {
     this.title = this.route.snapshot.paramMap.get('type');
+    setTimeout(() => {
+      this.bar3.nativeElement.style.height = '100%';
+      this.bar4.nativeElement.style.height = '50%';
+      this.bar5.nativeElement.style.height = '70%';
+    }, 500);  
   }
 
   onClickBar(index: number) {
     this.barActive = index;
-    // const animation = createAnimation()
-    //   .addElement(document.querySelector('.bar.active'))
-    //   .duration(2000)
-    //   .beforeStyles({
-    //   opacity: 0.2
-    // })
-    // .afterStyles({
-    //   background: 'rgba(0, 255, 0, 0.5)'
-    // })
-    // .afterClearStyles(['opacity'])
-    // .keyframes([
-    //   { offset: 0, transform: 'scale(1)' },
-    //   { offset: 0.5, transform: 'scale(1.5)' },
-    //   { offset: 1, transform: 'scale(1)' }
-    // ]);
-    // animation.play();
   }
 
   back() {

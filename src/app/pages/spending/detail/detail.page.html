@@ -1,15 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons collapse="true">
-      <ion-button (click)="back()">
-        <ion-icon size="large" slot="icon-only" name="close-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>{{title}}</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons collapse="true">
+        <ion-button (click)="back()">
+          <ion-icon size="large" slot="icon-only" name="close-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>{{title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <div class="card">
     <div class="circle"></div>
     <div class="header">
@@ -43,23 +44,20 @@
           ></div>
         </div>
         <div class="item-bar">
-          <div class="bar"
+          <div class="bar" #index3
             [ngClass]="{'bar':true, 'active':barActive===3}"
-            style="height: 100%;"
             (click)="onClickBar(3)"
           ></div>
         </div>
         <div class="item-bar">
-          <div class="bar"
+          <div class="bar"  #index4
             [ngClass]="{'bar':true, 'active':barActive===4}"
-            style="height: 50%;"
             (click)="onClickBar(4)"
           ></div>
         </div>
         <div class="item-bar">
-          <div class="bar"
+          <div class="bar" #index5
             [ngClass]="{'bar':true, 'active':barActive===5}"
-            style="height: 70%;"
             (click)="onClickBar(5)"
           ></div>
         </div>
@@ -71,20 +69,20 @@
         </div>
       </div>
       <div class="container">
-          <div class="date">Mar'22
-            <div [ngClass]="{'border':true, 'active':barActive===1}"></div>
+          <div [ngClass]="{'date':true, 'active':barActive===1}">Mar'22
+            <div class="border"></div>
           </div>
-          <div class="date">Apr'22
-            <div [ngClass]="{'border':true, 'active':barActive===2}"></div>
+          <div [ngClass]="{'date':true, 'active':barActive===2}">Apr'22
+            <div class="border"></div>
           </div>
-          <div class="date">May'22
-            <div [ngClass]="{'border':true, 'active':barActive===3}"></div>
+          <div [ngClass]="{'date':true, 'active':barActive===3}">May'22
+            <div class="border"></div>
           </div>
-          <div class="date">Jun'22
-            <div [ngClass]="{'border':true, 'active':barActive===4}"></div>
+          <div [ngClass]="{'date':true, 'active':barActive===4}">Jun'22
+            <div class="border"></div>
           </div>
-          <div class="date">Jul'22
-            <div [ngClass]="{'border':true, 'active':barActive===5}"></div>
+          <div [ngClass]="{'date':true, 'active':barActive===5}">Jul'22
+            <div class="border"></div>
           </div>
       </div>
     </div>
@@ -103,6 +101,62 @@
           <span> HKD</span>
         </div>
         <div class="range">Past 12 month total</div>
+      </div>
+    </div>
+    <div class="record">
+      <div class="date">
+        <span>July 2022</span>
+      </div>
+      <div class="list">
+        
+        <div class="item">
+          <div class="left">
+            <div class="icon style2">
+              <i class="mox-icon coffee"></i>
+            </div>
+            <div class="info">
+              <span class="two-row-text">eCup</span>
+              <span>12 July 17:31</span>
+            </div>
+          </div>
+          <div class="right normal-amount">
+            <span>-40.00</span>
+            <span> HKD</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="item">
+          <div class="left">
+            <div class="icon style1">
+              <i class="mox-icon food"></i>
+            </div>
+            <div class="info">
+              <span class="two-row-text">BURGERISM HONGKONG HKG</span>
+              <span>12 July 15:01</span>
+            </div>
+          </div>
+          <div class="right normal-amount">
+            <span>-532.00</span>
+            <span> HKD</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="item">
+          <div class="left">
+            <div class="icon style1">
+              <i class="mox-icon food"></i>
+            </div>
+            <div class="info">
+              <span class="two-row-text">CREPERIE HK HKG</span>
+              <span>12 July 12:30</span>
+            </div>
+          </div>
+          <div class="right normal-amount">
+            <span>-500.00</span>
+            <span> HKD</span>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>

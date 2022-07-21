@@ -26,6 +26,14 @@ ion-content {
             color: var(--mox-color-dark);
         }
     }
+    .hr {
+        border: 0;
+        border-top: 1px solid rgb(231, 231, 231);
+        display: block;
+        height: 1px;
+        margin: 0 16px;
+        padding: 0;
+    }
 
     .card {
         margin-top: 36px;
@@ -97,6 +105,7 @@ ion-content {
                         height: 1px;
                         border-bottom: 1px dashed var(--mox-color-gray500);
                         box-sizing: border-box;
+                        z-index: 999;
                     }
                 }
             }
@@ -113,12 +122,13 @@ ion-content {
                         position: absolute;
                         bottom: 0;
                         width: 24px;
+                        height: 0;
                         border-radius: 12px 12px 0 0;
                         background-color: #827AFE;
                         opacity: 0.3;
                         min-height: 0;
                         max-height: 128px;
-                        transition: all 0.2s;
+                        transition: opacity 0.3s, height 0.5s cubic-bezier(0.82, 0.01, 0.38, 1.35);
                         &.active {
                             opacity: 1;
                         }
@@ -137,26 +147,105 @@ ion-content {
                     position: relative;
                     &.active {
                         font-weight: 500;
+                        .border {
+                            width: 24px;
+                        }
                     }
                     .border {
                         position: absolute;
                         bottom: 2px;
                         width: 0;
                         border-bottom: 1px solid #827AFE;
-                        box-sizing: border-box;
                         transition: all 0.2s ease-in-out;
-                        &.active {
-                            width: 24px;
-                        }
                     }
                 }
             } 
         }
         .history {
+            padding: 16px 0 0 0;
+            display: flex;
+            justify-content: space-around;
             .item{
                 display: flex;
                 flex-direction: column;
+                max-width: 120px;
                 font-size: 14px;
+                .amount {
+                    text-align: center;
+                }
+                .range{
+                    text-align: center;
+                    padding-top: 4px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .record {
+            margin-top: 24px;
+            .date{
+                padding: 4px 16px;
+                font-size: 12px;
+                font-weight: 300;
+                color: var(--mox-color-gray500);
+                background-color: var(--mox-color-gray50);
+            }
+            .list {
+                width: 100%;
+    
+                .item {
+                    padding: 16px 16px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    position: relative;
+                    .left {
+                        max-width: 70%;
+                        display: flex;
+                        align-items: center;
+                        .icon {
+                            width: 42px;
+                            height: 42px;
+                            flex: 0 0 auto;
+                            border-radius: 50%;
+                            font-size: 28px;
+                            color: var(--mox-color-dark);
+                            &.style1 {
+                                text-align: center;
+                                background-color: #827AFE;
+                            }
+                            &.style2 {
+                                border: 1px solid var(--mox-color-gray100);
+                                background-color: var(--mox-color-white);
+                                color: #47c2bd;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            i {
+                                line-height: 42px;
+                            }
+                            
+                        }
+                        .info {
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding-left: 12px;
+                            display: flex;
+                            flex-direction: column;
+                            span:last-child {
+                                padding-top: 4px;
+                                font-size: 12px;
+                                color: var(--mox-color-gray500);
+                            }
+                        }
+                    }
+                    .right {
+                        span:last-child {
+                            color: var(--mox-color-gray500);
+                        }
+                    }
+                }
             }
         }
     }
