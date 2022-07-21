@@ -1,8 +1,8 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "Mox Bank",
+  "short_name": "Mox Bank",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "background_color": "#0ffaff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
