@@ -128,7 +128,7 @@ ion-content {
                         opacity: 0.3;
                         min-height: 0;
                         max-height: 128px;
-                        transition: opacity 0.3s, height 0.5s cubic-bezier(0.82, 0.01, 0.38, 1.35);
+                        transition: opacity 0.3s, height 0.8s cubic-bezier(0.82, 0.01, 0.38, 1.35);
                         &.active {
                             opacity: 1;
                         }
