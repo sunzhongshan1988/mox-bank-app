@@ -76,13 +76,12 @@ ion-tabs {
         bottom: calc(6px + env(safe-area-inset-bottom));
         left: calc(50% - 41px);
         cursor: pointer;
-        color: #fff;
         background: #000;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.36s ease-in-out;
         .mox-button {
             width: 86px;
             height: 86px;
@@ -92,6 +91,15 @@ ion-tabs {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            .icon-box {
+                &.active {
+                    transform: rotate(360deg);
+                    color: #000;
+                    transition: all 0.36s ease-in-out;
+                }
+                color: #fff;
+                transition: all 0.36s ease-in-out;
+            }
             .label {
                 top: 60px;
                 position: absolute;
@@ -109,9 +117,7 @@ ion-tabs {
             width: 160%;
             height: 160vw;
             left: -30vw;
-            transform: rotate(360deg);
             bottom: calc(-80vw + 49px + env(safe-area-inset-bottom));
-            color: #000;
             background: #fff;
         }
         
@@ -136,59 +142,61 @@ ion-tabs {
             transform: scale(0);
             bottom: calc(50% + 12px + env(safe-area-inset-bottom));
             left: calc(50% - 38px);
-            &.active {
-
-                transform: scale(1);
-            }
-            ion-icon {
-                font-size: 32px;
+            i {
+                font-size: 28px;
             }
             .label {
                 padding-top: 8px;
                 font-size: 12px;
             }
             .icon-box {
-                width: 48px;
-                height: 48px;
+                width: 44px;
+                height: 44px;
                 padding: 8px 0;
                 text-align: center;
                 border-radius: 50%;
-                color: #fff;
+                color: rgb(255, 255, 255);
                 background: rgb(0, 0, 0);
+                transition: all 0.3s ease-in-out;
             }
             &.item-01 {
+                transform: scale(1);
                 left: calc(33% - 38px);
-                bottom: 85%;
-                transition: 0.35s ease-in-out;
+                bottom: 86%;
+                transition: 0.32s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
             &.item-02 {
+                transform: scale(1);
                 left: calc(50% - 38px);
-                bottom: 85%;
-                transition: 0.4s ease-in-out;
+                bottom: 86%;
+                transition: 0.35s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
             &.item-03 {
+                transform: scale(1);
                 left: calc(66% - 38px);
-                bottom: 85%;
-                transition: 0.45s ease-in-out;
+                bottom: 86%;
+                transition: 0.38s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
             &.item-04 {
+                transform: scale(1);
                 left: calc(33% - 38px);
-                bottom: 70%;
-                transition: 0.5s ease-in-out;
+                bottom: 72%;
+                transition: 0.42s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
             &.item-05 {
+                transform: scale(1);
                 left: calc(50% - 38px);
-                bottom: 70%;
-                transition:  0.55s ease-in-out;
+                bottom: 72%;
+                transition:  0.45s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
             &.item-06 {
+                transform: scale(1);
                 left: calc(66% - 38px);
-                bottom: 70%;
-                transition:  0.65s ease-in-out;
+                bottom: 72%;
+                transition:  0.48s cubic-bezier(0.47, 0, 0.75, 0.72);
             }
         }
     }  
-    
     .mask {
         position: absolute;
         top: 0;

@@ -46,7 +46,7 @@ export class Tab4Page implements OnInit, AfterViewInit {
               show: false
             },
             tooltip: {
-              enabled: true,
+              enabled: false,
             },
             dataLabels: {
               enabled: true,
@@ -69,16 +69,38 @@ export class Tab4Page implements OnInit, AfterViewInit {
                   size: '72%',
                   labels: {
                     show: true,
+                    name: {
+                      show: true,
+                      fontSize: '12px',
+                      fontFamily: 'Maison Neue, sans-serif',
+                      fontWeight: 300,
+                      color: undefined,
+                      offsetY: -5,
+                      formatter: function (val) {
+                        return val
+                      }
+                    },
+                    value: {
+                      show: true,
+                      fontSize: '20px',
+                      fontFamily: 'Maison Neue, sans-serif',
+                      fontWeight: 300,
+                      color: undefined,
+                      offsetY: 10,
+                      formatter: function (val) {
+                        return `${-val} HKD`
+                      }
+                    },
                     total: {
                       show: true,
                       label: 'Total',
                       color: '#000000',
                       fontSize: '20px',
                       fontFamily: 'Maison Neue, sans-serif',
-                      fontWeight: 500,
+                      fontWeight: 300,
                       formatter: (w) => {
                         const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
-                        return `${0 - total} HKD`;
+                        return `${-total} HKD`;
                       }
                     }
                   }
@@ -107,11 +129,11 @@ export class Tab4Page implements OnInit, AfterViewInit {
   }
   ngAfterViewInit() {
     this.stanby = true;
-    setTimeout(() => {
-      this.chart.updateOptions({
-        series: [ 1842.50, 1800.00, 553.90, 375.00, 336.00 ],
-      }, true, false);
-    }, 1000);
+  }
+  ionViewDidEnter () {
+    this.chart.updateOptions({
+      series: [ 1842.50, 1800.00, 553.90, 375.00, 336.00 ],
+    }, true, false);
   }
   gotoDetail() {
     this.navCtrl.navigateForward(["/pages/spending/detail", { type: 'Food & drinks' }]);

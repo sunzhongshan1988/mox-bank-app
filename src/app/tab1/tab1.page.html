@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="credit-card">
-    <div class="container">
+    <div [ngClass]="{'container':true,'loaded':loaded}">
       <div class="content">
         <div class="one">Credit spend</div>
         <div class="two normal-amount">
@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="container">
-            <div class="icon-box bg3"><i class="mox-icon transfer"></i></div>
+            <div class="icon-box bg3"><i class="mox-icon transfer-mox"></i></div>
             <div class="label two-row-text">
               <span>Transfer with Mox Credit</span>
             </div>

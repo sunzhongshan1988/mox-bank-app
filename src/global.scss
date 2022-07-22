@@ -108,7 +108,7 @@
   &.add-money:before { content:'\E90A'; }
   &.switch:before { content:'\E9EA'; }
   &.referral:before { content:'\E909'; }
-  &.transfer:before { content:'\E92A'; }
+  &.transfer-mox:before { content:'\E92A'; }
   &.currency:before { content:'\E92C'; }
   &.food:before { content:'\E945'; }
   &.wallet::after { content:'\E935'; }
@@ -116,6 +116,10 @@
   &.shopping:before { content:'\E984'; }
   &.other:before { content:'\E965'; }
   &.coffee:before { content:'\E9C5'; }
+  &.bill::before { content: '\E99C'}
+  &.instant::before { content: '\E9EB'}
+  &.transfer::before { content: '\E9F1'}
+  &.request::before { content: '\E9A1'}
 }
 
 

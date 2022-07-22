@@ -144,16 +144,28 @@ ion-content {
     .credit-card {
         margin: 16px 16px;
         width: auto;
+        border-radius: 20px;
+        background-color: #00FAFF;
         .container {
             width: 100%;
-            border-radius: 14px;
-            aspect-ratio: 1.6;
+            aspect-ratio: 1.58;
             position: relative;
             background-size: cover;
-            background-image: url("../../assets/images/mastercard.png");
+            opacity: 0;
             @supports not (aspect-ratio: 1.6) {
                 padding-top: 62%;
             }
+            &.loaded {
+                opacity: 1;
+                color: var(--mox-color-white);
+                background-image: url("../../assets/images/mastercard-black.png");
+                .details {
+                    span{
+                        border:2px solid var(--mox-color-white);
+                    }
+                }
+                transition: all 0.5s ease-in-out;
+            } 
 
             .content {
                 position: absolute;
@@ -208,6 +220,7 @@ ion-content {
             height: 64px;
             width: auto;
             padding: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             background-color: var(--mox-color-white);
             border-radius: 16px;
             position: relative;
