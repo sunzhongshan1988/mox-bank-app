@@ -119,6 +119,7 @@ ion-tabs {
             left: -30vw;
             bottom: calc(-80vw + 49px + env(safe-area-inset-bottom));
             background: #fff;
+            transition: all 0.36s ease-in-out;
         }
         
       }
@@ -155,9 +156,15 @@ ion-tabs {
                 padding: 8px 0;
                 text-align: center;
                 border-radius: 50%;
-                color: rgb(255, 255, 255);
-                background: rgb(0, 0, 0);
+                background: #ccc;
                 transition: all 0.3s ease-in-out;
+            }
+            &.normal {
+                .icon-box{
+                    color: rgb(255, 255, 255);
+                    background: rgb(0, 0, 0);
+                    transition: all 0.3s ease-in-out;
+                }
             }
             &.item-01 {
                 transform: scale(1);

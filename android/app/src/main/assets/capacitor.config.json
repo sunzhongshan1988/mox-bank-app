@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "mox-bank-app",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
